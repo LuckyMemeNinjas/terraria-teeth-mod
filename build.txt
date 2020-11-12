@@ -1,0 +1,4 @@
+author = EthosLab
+version = 0.1
+displayName = Teeth Mod
+homepage = https://github.com/
