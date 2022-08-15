@@ -1,3 +1,4 @@
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -12,29 +13,28 @@ namespace TeethMod.Items
 		}
 		public override void SetDefaults()
 		{
-			item.accessory = true;
-			item.melee = true;
-			item.width = 40;
-			item.height = 40;
-			item.scale = 0.25f;
-			item.defense = 21;
-			item.useTime = 25;
-			item.useAnimation = 25;
-			item.useStyle = 1;
-			item.knockBack = 21;
-			item.value = 21000;
-			item.rare = -12;
-			item.UseSound = SoundID.Item28;
-			item.autoReuse = true;
+			Item.accessory = true;
+			Item.DamageType = DamageClass.Melee;
+			Item.width = 40;
+			Item.height = 40;
+			Item.scale = 0.25f;
+			Item.defense = 21;
+			Item.useTime = 25;
+			Item.useAnimation = 25;
+			Item.useStyle = 1;
+			Item.knockBack = 21;
+			Item.value = 21000;
+			Item.rare = -12;
+			Item.UseSound = SoundID.Item28;
+			Item.autoReuse = true;
 		}
 
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.DirtBlock, 1);
 			recipe.AddTile(TileID.WorkBenches);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

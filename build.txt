@@ -1,4 +1,4 @@
 author = EthosLab
-version = 0.1.1
+version = 0.2.0
 displayName = Teeth Mod
 homepage = https://github.com/LuckyMemeNinjas/terraria-teeth-mod
